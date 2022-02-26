@@ -55,9 +55,7 @@ function Card() {
   }
 
   const weather = () => {
-    /*      fetch(`${API_HOST}forecasts/${API_VERSION}/daily/1day/${location.Key}?apikey=${API_KEY}`, {
-        mode: 'no-cors'
-})*/  fetch(`${API_HOST}forecasts/${API_VERSION}/daily/1day/${location.Key}?apikey=${API_KEY}&metric=true`)
+    fetch(`${API_HOST}forecasts/${API_VERSION}/daily/1day/${location.Key}?apikey=${API_KEY}&metric=true`)
         .then(res => res.json())
         .then(result => {
         setforecast(result);
